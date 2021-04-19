@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     EyesRight.showImage(0)
-    pins.servoWritePin(AnalogPin.P1, RightArm * 90)
+    pins.servoWritePin(AnalogPin.P2, Angles[RightArm])
     basic.pause(500)
     Eyes.showImage(0)
     RightArm += 1
@@ -11,7 +11,7 @@ input.onButtonPressed(Button.A, function () {
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "L") {
         EyesLeft.showImage(0)
-        pins.servoWritePin(AnalogPin.P2, LeftArm * 90)
+        pins.servoWritePin(AnalogPin.P2, Angles[LeftArm])
         basic.pause(500)
         Eyes.showImage(0)
         LeftArm += 1
@@ -21,7 +21,7 @@ radio.onReceivedString(function (receivedString) {
     }
     if (receivedString == "R") {
         EyesRight.showImage(0)
-        pins.servoWritePin(AnalogPin.P1, RightArm * 90)
+        pins.servoWritePin(AnalogPin.P1, Angles[RightArm])
         basic.pause(500)
         Eyes.showImage(0)
         RightArm += 1
@@ -32,7 +32,7 @@ radio.onReceivedString(function (receivedString) {
 })
 input.onButtonPressed(Button.B, function () {
     EyesLeft.showImage(0)
-    pins.servoWritePin(AnalogPin.P2, LeftArm * 90)
+    pins.servoWritePin(AnalogPin.P2, Angles[LeftArm])
     basic.pause(500)
     Eyes.showImage(0)
     LeftArm += 1
@@ -40,6 +40,7 @@ input.onButtonPressed(Button.B, function () {
         LeftArm = 0
     }
 })
+let Angles: number[] = []
 let LeftArm = 0
 let RightArm = 0
 let EyesLeft: Image = null
@@ -72,3 +73,4 @@ EyesLeft = images.createImage(`
 RightArm = 2
 LeftArm = 2
 Eyes.showImage(0)
+Angles = [20, 90, 160]
