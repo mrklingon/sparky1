@@ -46,6 +46,8 @@ let EyesLeft: Image = null
 let EyesRight: Image = null
 let Eyes: Image = null
 radio.setGroup(1)
+pins.servoWritePin(AnalogPin.P1, 90)
+pins.servoWritePin(AnalogPin.P2, 90)
 Eyes = images.createImage(`
     . . . . .
     . # . # .
@@ -67,6 +69,6 @@ EyesLeft = images.createImage(`
     . # # # .
     . . . . .
     `)
-RightArm = 1
-LeftArm = 1
+RightArm = 2
+LeftArm = 2
 Eyes.showImage(0)
