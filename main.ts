@@ -32,7 +32,7 @@ radio.onReceivedString(function (receivedString) {
 })
 input.onButtonPressed(Button.B, function () {
     EyesLeft.showImage(0)
-    pins.servoWritePin(AnalogPin.P2, Angles[LeftArm])
+    pins.servoWritePin(AnalogPin.P1, Angles[LeftArm])
     basic.pause(500)
     Eyes.showImage(0)
     LeftArm += 1
