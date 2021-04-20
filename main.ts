@@ -4,7 +4,7 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(500)
     Eyes.showImage(0)
     RightArm += 1
-    if (RightArm > 2) {
+    if (RightArm > 3) {
         RightArm = 0
     }
 })
@@ -15,7 +15,7 @@ radio.onReceivedString(function (receivedString) {
         basic.pause(500)
         Eyes.showImage(0)
         LeftArm += 1
-        if (LeftArm > 2) {
+        if (LeftArm > 3) {
             LeftArm = 0
         }
     }
@@ -25,7 +25,7 @@ radio.onReceivedString(function (receivedString) {
         basic.pause(500)
         Eyes.showImage(0)
         RightArm += 1
-        if (RightArm > 2) {
+        if (RightArm > 3) {
             RightArm = 0
         }
     }
@@ -36,7 +36,7 @@ input.onButtonPressed(Button.B, function () {
     basic.pause(500)
     Eyes.showImage(0)
     LeftArm += 1
-    if (LeftArm > 2) {
+    if (LeftArm > 3) {
         LeftArm = 0
     }
 })
@@ -73,4 +73,4 @@ EyesLeft = images.createImage(`
 RightArm = 2
 LeftArm = 2
 Eyes.showImage(0)
-Angles = [20, 90, 160]
+Angles = [20, 90, 160, 90]
